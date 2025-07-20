@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import InteractiveBackground from './InteractiveBackground';
 import { mockData } from '../data/mock';
 
 const Portfolio = () => {
@@ -32,8 +33,12 @@ const Portfolio = () => {
   if (loading) {
     return (
       <div className="dark-container loading-container">
+        <InteractiveBackground />
         <div className="loading-spinner">
-          <div className="pixelated-text display-large">LOADING...</div>
+          <div className="mono-bold display-large">LOADING...</div>
+          <div className="loading-bar">
+            <div className="loading-progress"></div>
+          </div>
         </div>
       </div>
     );
@@ -42,8 +47,10 @@ const Portfolio = () => {
   if (!data) {
     return (
       <div className="dark-container error-container">
+        <InteractiveBackground />
         <div className="error-message">
-          <div className="pixelated-text display-large">ERROR_404</div>
+          <div className="mono-bold display-large">ERROR_404</div>
+          <div className="mono-text body-medium text-muted">Data not found</div>
         </div>
       </div>
     );
@@ -51,6 +58,7 @@ const Portfolio = () => {
 
   return (
     <div className="dark-container">
+      <InteractiveBackground />
       <Header />
       <main className="main-content">
         <Hero data={data.hero} />
