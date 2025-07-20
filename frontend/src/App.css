@@ -638,12 +638,12 @@ body {
 }
 
 .hero-description {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   max-width: 520px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 0.8s forwards;
+  animation: slideInUp 0.8s ease-out 0.8s forwards;
 }
 
 .hero-stats {
