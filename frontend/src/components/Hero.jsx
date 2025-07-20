@@ -42,7 +42,7 @@ const Hero = ({ data }) => {
       <div className="hero-content">
         <div className="hero-text">
           <div className="hero-greeting">
-            <span className="pixelated-text body-large text-muted">HELLO_WORLD, I'M</span>
+            <span className="mono-text body-medium text-muted">HELLO_WORLD, I'M</span>
           </div>
           
           <h1 className="hero-name">
@@ -51,40 +51,40 @@ const Hero = ({ data }) => {
           </h1>
           
           <div className="hero-role">
-            <span className="display-medium orbitron-text">
+            <span className="display-medium mono-bold">
               {currentText}
               <span className="typing-cursor">|</span>
             </span>
           </div>
           
-          <p className="hero-description pixelated-text body-large">
+          <p className="hero-description mono-text body-large">
             {data?.description || 'Protecting digital assets through innovative security solutions and robust development practices.'}
           </p>
           
           <div className="hero-stats">
-            <div className="stat-item">
-              <Shield size={24} />
-              <span className="pixelated-text body-medium">{data?.stats?.experience || '5+'} YEARS_EXPERIENCE</span>
+            <div className="stat-item interactive-element">
+              <Shield size={20} />
+              <span className="mono-text body-small">{data?.stats?.experience || '5+'} YEARS_EXPERIENCE</span>
             </div>
-            <div className="stat-item">
-              <Lock size={24} />
-              <span className="pixelated-text body-medium">{data?.stats?.projects || '50+'} SECURITY_AUDITS</span>
+            <div className="stat-item interactive-element">
+              <Lock size={20} />
+              <span className="mono-text body-small">{data?.stats?.projects || '50+'} SECURITY_AUDITS</span>
             </div>
-            <div className="stat-item">
-              <Bug size={24} />
-              <span className="pixelated-text body-medium">{data?.stats?.vulnerabilities || '200+'} BUGS_FOUND</span>
+            <div className="stat-item interactive-element">
+              <Bug size={20} />
+              <span className="mono-text body-small">{data?.stats?.vulnerabilities || '200+'} BUGS_FOUND</span>
             </div>
           </div>
           
           <div className="hero-actions">
             <button 
-              className="btn-primary orbitron-text"
+              className="btn-primary mono-medium interactive-element"
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
             >
               VIEW_PROJECTS
             </button>
             <button 
-              className="btn-secondary orbitron-text"
+              className="btn-secondary mono-medium interactive-element"
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
             >
               GET_IN_TOUCH
