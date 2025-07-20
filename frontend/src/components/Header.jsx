@@ -27,31 +27,31 @@ const Header = () => {
     <header className={`dark-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
           <div className="logo-section" onClick={() => scrollToSection('hero')}>
-            <Shield className="logo-icon" size={32} />
-            <span className="orbitron-text heading-2">JAYANTH.DEV</span>
+            <Shield className="logo-icon" size={28} />
+            <span className="mono-bold heading-2">JAYANTH.DEV</span>
           </div>
 
           <nav className="dark-nav desktop-nav">
             <button 
-              className="nav-link orbitron-text" 
+              className="nav-link mono-medium" 
               onClick={() => scrollToSection('about')}
             >
               ABOUT
             </button>
             <button 
-              className="nav-link orbitron-text" 
+              className="nav-link mono-medium" 
               onClick={() => scrollToSection('skills')}
             >
               SKILLS
             </button>
             <button 
-              className="nav-link orbitron-text" 
+              className="nav-link mono-medium" 
               onClick={() => scrollToSection('projects')}
             >
               PROJECTS
             </button>
             <button 
-              className="nav-link orbitron-text" 
+              className="nav-link mono-medium" 
               onClick={() => scrollToSection('contact')}
             >
               CONTACT
@@ -60,17 +60,17 @@ const Header = () => {
 
           <div className="header-actions">
             <button 
-              className="btn-primary orbitron-text"
+              className="btn-primary mono-medium interactive-element"
               onClick={() => scrollToSection('contact')}
             >
-              <Mail size={18} />
+              <Mail size={16} />
               HIRE_ME
             </button>
             <button 
-              className="btn-secondary orbitron-text"
+              className="btn-secondary mono-medium interactive-element"
               onClick={() => window.open('mailto:jayanth@example.com', '_blank')}
             >
-              <Code2 size={18} />
+              <Code2 size={16} />
               VIEW_CV
             </button>
           </div>
