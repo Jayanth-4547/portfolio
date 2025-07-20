@@ -121,11 +121,11 @@ const Hero = ({ data }) => {
         
         <div className="hero-visual">
           <div className="security-matrix">
-            <div className="matrix-line">{'> INITIALIZING_SECURITY_PROTOCOLS...'}</div>
-            <div className="matrix-line">{'> LOADING_THREAT_DETECTION...'}</div>
-            <div className="matrix-line">{'> SCANNING_VULNERABILITIES...'}</div>
-            <div className="matrix-line">{'> SYSTEM_STATUS: SECURE'}</div>
-            <div className="matrix-line brand-text">{'> ACCESS_GRANTED'}</div>
+            <div className="matrix-line mono-text">{'> INITIALIZING_SECURITY_PROTOCOLS...'}</div>
+            <div className="matrix-line mono-text">{'> LOADING_THREAT_DETECTION...'}</div>
+            <div className="matrix-line mono-text">{'> SCANNING_VULNERABILITIES...'}</div>
+            <div className="matrix-line mono-text">{'> SYSTEM_STATUS: SECURE'}</div>
+            <div className="matrix-line mono-bold brand-text">{'> ACCESS_GRANTED'}</div>
           </div>
         </div>
       </div>
