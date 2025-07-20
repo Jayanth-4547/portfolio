@@ -1527,7 +1527,7 @@ body {
   25%, 75% { transform: scale(1.1); }
 }
 
-@keyframes fadeInUp {
+@keyframes slideInUp {
   from { 
     opacity: 0; 
     transform: translateY(30px); 
@@ -1535,6 +1535,17 @@ body {
   to { 
     opacity: 1; 
     transform: translateY(0); 
+  }
+}
+
+@keyframes matrixType {
+  from { 
+    opacity: 0; 
+    transform: translateX(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
   }
 }
 
