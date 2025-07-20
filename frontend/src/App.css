@@ -610,9 +610,9 @@ body {
 }
 
 .hero-greeting {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 0.2s forwards;
+  animation: slideInUp 0.8s ease-out 0.2s forwards;
 }
 
 .hero-name {
