@@ -675,10 +675,10 @@ body {
 
 .hero-actions {
   display: flex;
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 16px;
+  margin-bottom: 40px;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 1.2s forwards;
+  animation: slideInUp 0.8s ease-out 1.2s forwards;
 }
 
 .hero-social {
