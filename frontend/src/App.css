@@ -583,14 +583,14 @@ body {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* Enhanced Hero Section */
+/* Enhanced Hero Section with Parallax and Interactions */
 .hero-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 140px 7.6923% 80px;
+  padding: 120px 7.6923% 80px;
   overflow: hidden;
 }
 
