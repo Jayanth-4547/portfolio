@@ -683,9 +683,9 @@ body {
 
 .hero-social {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 1.4s forwards;
+  animation: slideInUp 0.8s ease-out 1.4s forwards;
 }
 
 .social-link {
