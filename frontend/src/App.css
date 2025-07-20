@@ -648,10 +648,10 @@ body {
 
 .hero-stats {
   display: flex;
-  gap: 40px;
-  margin-bottom: 60px;
+  gap: 24px;
+  margin-bottom: 48px;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 1s forwards;
+  animation: slideInUp 0.8s ease-out 1s forwards;
 }
 
 .stat-item {
