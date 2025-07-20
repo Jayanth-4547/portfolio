@@ -26,54 +26,54 @@ const Header = () => {
   return (
     <header className={`dark-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
-        <div className="logo-section" onClick={() => scrollToSection('hero')}>
-          <Shield className="logo-icon" size={32} />
-          <span className="pixelated-text heading-2">JAYANTH.DEV</span>
-        </div>
+          <div className="logo-section" onClick={() => scrollToSection('hero')}>
+            <Shield className="logo-icon" size={32} />
+            <span className="orbitron-text heading-2">JAYANTH.DEV</span>
+          </div>
 
-        <nav className="dark-nav desktop-nav">
-          <button 
-            className="nav-link pixelated-text" 
-            onClick={() => scrollToSection('about')}
-          >
-            ABOUT
-          </button>
-          <button 
-            className="nav-link pixelated-text" 
-            onClick={() => scrollToSection('skills')}
-          >
-            SKILLS
-          </button>
-          <button 
-            className="nav-link pixelated-text" 
-            onClick={() => scrollToSection('projects')}
-          >
-            PROJECTS
-          </button>
-          <button 
-            className="nav-link pixelated-text" 
-            onClick={() => scrollToSection('contact')}
-          >
-            CONTACT
-          </button>
-        </nav>
+          <nav className="dark-nav desktop-nav">
+            <button 
+              className="nav-link orbitron-text" 
+              onClick={() => scrollToSection('about')}
+            >
+              ABOUT
+            </button>
+            <button 
+              className="nav-link orbitron-text" 
+              onClick={() => scrollToSection('skills')}
+            >
+              SKILLS
+            </button>
+            <button 
+              className="nav-link orbitron-text" 
+              onClick={() => scrollToSection('projects')}
+            >
+              PROJECTS
+            </button>
+            <button 
+              className="nav-link orbitron-text" 
+              onClick={() => scrollToSection('contact')}
+            >
+              CONTACT
+            </button>
+          </nav>
 
-        <div className="header-actions">
-          <button 
-            className="btn-primary pixelated-text"
-            onClick={() => scrollToSection('contact')}
-          >
-            <Mail size={18} />
-            HIRE_ME
-          </button>
-          <button 
-            className="btn-secondary pixelated-text"
-            onClick={() => window.open('mailto:jayanth@example.com', '_blank')}
-          >
-            <Code2 size={18} />
-            VIEW_CV
-          </button>
-        </div>
+          <div className="header-actions">
+            <button 
+              className="btn-primary orbitron-text"
+              onClick={() => scrollToSection('contact')}
+            >
+              <Mail size={18} />
+              HIRE_ME
+            </button>
+            <button 
+              className="btn-secondary orbitron-text"
+              onClick={() => window.open('mailto:jayanth@example.com', '_blank')}
+            >
+              <Code2 size={18} />
+              VIEW_CV
+            </button>
+          </div>
 
         <button 
           className="mobile-menu-toggle"
