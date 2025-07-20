@@ -46,12 +46,12 @@ const Hero = ({ data }) => {
           </div>
           
           <h1 className="hero-name">
-            <span className="pixelated-text display-huge">{data?.name || 'JAYANTH'}</span>
-            <span className="pixelated-text display-huge brand-text">TATINENI</span>
+            <span className="display-huge">JAYANTH</span>
+            <span className="display-huge brand-text">TATINENI</span>
           </h1>
           
           <div className="hero-role">
-            <span className="pixelated-text display-medium">
+            <span className="display-medium orbitron-text">
               {currentText}
               <span className="typing-cursor">|</span>
             </span>
@@ -78,13 +78,13 @@ const Hero = ({ data }) => {
           
           <div className="hero-actions">
             <button 
-              className="btn-primary pixelated-text"
+              className="btn-primary orbitron-text"
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
             >
               VIEW_PROJECTS
             </button>
             <button 
-              className="btn-secondary pixelated-text"
+              className="btn-secondary orbitron-text"
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
             >
               GET_IN_TOUCH
