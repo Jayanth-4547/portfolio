@@ -1412,6 +1412,17 @@ body::before {
   25%, 75% { transform: scale(1.1); }
 }
 
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .dark-content-container {
