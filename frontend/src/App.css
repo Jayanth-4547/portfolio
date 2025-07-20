@@ -632,10 +632,9 @@ body {
 }
 
 .typing-cursor {
-  animation: blink 1s infinite;
+  animation: blink 1.2s infinite;
   color: var(--brand-primary);
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0, 255, 209, 0.8);
+  font-weight: 600;
 }
 
 .hero-description {
