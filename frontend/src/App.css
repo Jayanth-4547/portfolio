@@ -294,6 +294,45 @@ body {
   padding-top: 80px;
 }
 
+/* Loading States with Enhanced Animations */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  gap: 24px;
+}
+
+.loading-spinner .display-large {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 2px;
+  background: var(--border-subtle);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
+  width: 100%;
+  animation: loadingProgress 2s ease-in-out infinite;
+}
+
+@keyframes loadingProgress {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.error-message {
+  text-align: center;
+}
+
 .section-padding {
   padding: 100px 0;
 }
