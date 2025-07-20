@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const InteractiveBackground = () => {
   const [particles, setParticles] = useState([]);
@@ -6,7 +6,7 @@ const InteractiveBackground = () => {
 
   useEffect(() => {
     // Create initial particles
-    const initialParticles = Array.from({ length: 12 }, (_, i) => ({
+    const initialParticles = Array.from({ length: 10 }, (_, i) => ({
       id: i,
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -15,10 +15,10 @@ const InteractiveBackground = () => {
     }));
     setParticles(initialParticles);
 
-    // Optimized mouse move handler with requestAnimationFrame
+    // Optimized mouse move handler
     let isMoving = false;
-    const handleMouseMove = useCallback((e) => {
-      if (!isMoving) {
+    const handleMouseMove = (e) => {
+      if (!isMoving && cursorRef.current) {
         isMoving = true;
         requestAnimationFrame(() => {
           if (cursorRef.current) {
@@ -28,7 +28,7 @@ const InteractiveBackground = () => {
           isMoving = false;
         });
       }
-    }, []);
+    };
 
     document.addEventListener('mousemove', handleMouseMove, { passive: true });
 
@@ -39,7 +39,6 @@ const InteractiveBackground = () => {
 
   return (
     <>
-      {/* Optimized Custom Cursor */}
       <div 
         ref={cursorRef}
         className="cursor" 
@@ -48,8 +47,6 @@ const InteractiveBackground = () => {
           top: '-100px',
         }}
       />
-
-      {/* Interactive Background */}
       <div className="interactive-bg">
         <div className="bg-grid" />
         <div className="floating-particles">
