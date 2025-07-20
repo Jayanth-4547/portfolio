@@ -616,10 +616,10 @@ body {
 }
 
 .hero-name {
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   line-height: 0.85;
   opacity: 0;
-  animation: fadeInUp 1s ease-out 0.4s forwards;
+  animation: slideInUp 0.8s ease-out 0.4s forwards;
 }
 
 .hero-role {
