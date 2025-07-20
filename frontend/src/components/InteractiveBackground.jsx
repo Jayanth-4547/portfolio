@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 
 const InteractiveBackground = () => {
   const [particles, setParticles] = useState([]);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const cursorRef = useRef(null);
 
   useEffect(() => {
     // Create initial particles
-    const initialParticles = Array.from({ length: 15 }, (_, i) => ({
+    const initialParticles = Array.from({ length: 12 }, (_, i) => ({
       id: i,
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -15,12 +15,22 @@ const InteractiveBackground = () => {
     }));
     setParticles(initialParticles);
 
-    // Simple mouse move handler
-    const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
+    // Optimized mouse move handler with requestAnimationFrame
+    let isMoving = false;
+    const handleMouseMove = useCallback((e) => {
+      if (!isMoving) {
+        isMoving = true;
+        requestAnimationFrame(() => {
+          if (cursorRef.current) {
+            cursorRef.current.style.left = `${e.clientX - 10}px`;
+            cursorRef.current.style.top = `${e.clientY - 10}px`;
+          }
+          isMoving = false;
+        });
+      }
+    }, []);
 
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
@@ -29,12 +39,13 @@ const InteractiveBackground = () => {
 
   return (
     <>
-      {/* Custom Cursor */}
+      {/* Optimized Custom Cursor */}
       <div 
+        ref={cursorRef}
         className="cursor" 
         style={{
-          left: mousePos.x - 10,
-          top: mousePos.y - 10,
+          left: '-100px',
+          top: '-100px',
         }}
       />
 
